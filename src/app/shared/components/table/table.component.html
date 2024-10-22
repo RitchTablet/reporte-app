@@ -1,0 +1,38 @@
+<div class="flex-col rounded-lg bg-background px-8 py-8 sm:flex-row">
+  <div class="mb-4 flex items-center justify-between">
+    <div class="flex-col items-center">
+      <h3 class="text-md font-bold text-foreground">{{ title }}</h3>
+      <span class="text-xs text-muted-foreground">{{ subtitle }}</span>
+    </div>
+    <button class="rounded-full text-muted-foreground hover:bg-slate-200">
+      <svg-icon src="assets/icons/heroicons/outline/ellipsis-vertical.svg" [svgClass]="'h-6 w-6'"></svg-icon>
+    </button>
+  </div>
+
+  <div class="overflow-x-auto pb-5">
+    @if (data.length != 0) {
+      <table class="w-full table-auto border-collapse">
+        <thead class="text-xs uppercase text-muted-foreground">
+          <tr>
+            @for (col of columns; track $index) {
+            <th class="py-3 text-center" 
+            [ngStyle]="{'min-width': col.minWidth ? col.minWidth+'px' : '100px'}">
+              {{ col.header }}
+            </th>
+            }
+          </tr>
+        </thead>
+  
+        <tbody>
+          @for (item of data; track $index) {
+          <tr class="border-b border-dashed border-border hover:bg-card">
+            @for (col of columns; track $index) {
+            <td class="text-center p-2 text-sm font-semibold text-muted-foreground">{{ item[col.key] }}</td>
+            }
+          </tr>
+          }
+        </tbody>
+      </table>
+    }
+  </div>
+</div>

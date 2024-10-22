@@ -163,3 +163,33 @@
 
 /** Plugins **/
 @import './assets/styles/apexchart.scss';
+
+/* Estilo del contenedor del scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* Ancho del scrollbar */
+  height: 10px; /* Alto del scrollbar horizontal */
+}
+
+/* Estilo de la pista del scrollbar (el fondo) */
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Color de la pista */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo del "thumb" del scrollbar (la barra que se mueve) */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color del thumb */
+  border-radius: 10px; /* Bordes redondeados */
+  border: 3px solid #f0f0f0; /* Espacio entre el thumb y la pista */
+}
+
+/* Estilo del thumb cuando está en "hover" (cuando pasas el mouse por encima) */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color del thumb en hover */
+}
+
+/* Estilo de la esquina entre scrollbars horizontal y vertical (en caso de que exista) */
+::-webkit-scrollbar-corner {
+  background: #f0f0f0; /* Color de la esquina */
+}
+

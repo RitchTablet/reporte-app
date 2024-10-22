@@ -24,6 +24,12 @@
       "es2020",
       "dom"
     ],
+    "paths": {
+      "@pages/*": ["./src/app/pages/*"],
+      "@shared/*": ["./src/app/shared/*"],
+      "@services/*": ["./src/app/services/*"],
+      "@environments/*": ["./src/environments/*"],
+    },
     "useDefineForClassFields": false
   },
 	"angularCompilerOptions": {

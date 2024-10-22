@@ -1,0 +1,16 @@
+# Ignorar node_modules ya que se instalarán dentro del contenedor
+node_modules
+
+# Ignorar la carpeta de salida del build de Angular
+dist
+
+# Ignorar archivos de configuración de Docker
+Dockerfile
+docker-compose.yml
+
+# Ignorar archivos de control de versiones
+.git
+.gitignore
+
+# Ignorar configuraciones de entorno (si tienes archivos de configuración sensibles)
+.env

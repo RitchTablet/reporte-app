@@ -5,12 +5,8 @@
     <!-- Logo -->
     <div class="relative h-10">
       <div class="flex items-center" *ngIf="menuService.showSideBar">
-        <a
-          (click)="toggleSidebar()"
-          class="flex cursor-pointer items-center justify-center rounded bg-primary p-2 focus:outline-none focus:ring-1">
-          <svg-icon src="assets/icons/logo.svg"> </svg-icon>
-        </a>
-        <b class="ml-1 pl-2 text-sm font-bold text-foreground">
+        <svg-icon src="assets/icons/deathicon.svg"> </svg-icon>
+        <b class="ml-1 pl-2 text-xl font-bold text-foreground">
           {{ appJson.displayName }}
         </b>
       </div>
@@ -20,22 +16,18 @@
         [ngClass]="{ 'rotate-180': !menuService.showSideBar }">
         <svg-icon src="assets/icons/heroicons/solid/chevron-double-left.svg"> </svg-icon>
       </button>
-    </div>
-
-    <!-- Separator -->
-    <div class="pt-3">
-      <hr class="border-dashed border-muted" />
-    </div>
+    </div>    
 
     <!-- Menu Items -->
-    <app-sidebar-menu></app-sidebar-menu>
+    <div>
+      <br>
+      <app-sidebar-menu></app-sidebar-menu>
+    </div>
   </div>
 
   <div class="mx-4 my-4 space-y-1">
     <!-- Version -->
-    <a
-      target="_blank"
-      href="https://github.com/luciano-work/angular-tailwind"
+    <div
       class="group flex h-9 cursor-pointer items-center justify-start rounded p-2 hover:bg-card">
       <svg-icon
         src="assets/icons/heroicons/outline/information-circle.svg"
@@ -52,6 +44,6 @@
           v{{ appJson.version }}
         </span>
       </div>
-    </a>
+    </div>
   </div>
 </nav>

@@ -1,6 +1,6 @@
 {
   "name": "angular-tailwind",
-  "displayName": "Angular Tailwind",
+  "displayName": "Reportes",
   "version": "0.8.0",
   "description": "Angular & Tailwind CSS Admin Dashboard Starter Kit, Free and Open Source",
   "homepage": "https://github.com/lannodev/angular-tailwind#readme",
@@ -45,8 +45,11 @@
     "@tailwindcss/typography": "^0.5.4",
     "angular-svg-icon": "^13.0.0",
     "apexcharts": "^3.35.3",
+    "dayjs": "^1.11.13",
     "ng-apexcharts": "^1.7.1",
+    "ngx-loading": "^17.0.0",
     "ngx-sonner": "^2.0.1",
+    "ngx-spinner": "^17.0.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"

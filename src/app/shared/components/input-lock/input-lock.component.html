@@ -1,0 +1,7 @@
+<div [formGroup]="formGroup">
+  <div class="mb-1 flex items-start justify-between">
+    <label for="provider" class="text-xs font-medium text-muted-foreground">{{label}}</label>
+    <app-toggle-lock-un-lock-button-icon (onIsOpen)="onEnableDisableFormControl()"/>
+  </div>
+  <input type="text" [formControlName]="controlName" required />
+</div>
