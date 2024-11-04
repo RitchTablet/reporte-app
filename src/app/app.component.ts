@@ -13,6 +13,7 @@ import { LoadingService } from '@services/loading.service';
   styleUrls: ['./app.component.scss'],
   standalone: true,
   imports: [NgClass, RouterOutlet, ResponsiveHelperComponent, NgxSonnerToaster, NgxLoadingModule, CommonModule],
+  providers: []
 })
 export class AppComponent {
   title = 'Angular Tailwind';

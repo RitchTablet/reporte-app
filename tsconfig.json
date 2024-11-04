@@ -26,6 +26,7 @@
     ],
     "paths": {
       "@pages/*": ["./src/app/pages/*"],
+      "@modules/*": ["./src/app/modules/*"],
       "@shared/*": ["./src/app/shared/*"],
       "@services/*": ["./src/app/services/*"],
       "@environments/*": ["./src/environments/*"],

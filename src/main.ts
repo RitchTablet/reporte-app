@@ -1,12 +1,15 @@
 import { enableProdMode, importProvidersFrom } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { environment } from './environments/environment';
 import { AppComponent } from './app/app.component';
 import { AppRoutingModule } from './app/app-routing.module';
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
-
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { errorInterceptor } from '@shared/interceptors/error.interceptor';
+import { loadingInterceptor } from '@shared/interceptors/loading.interceptor';
+import { urlInterceptor } from '@shared/interceptors/url.interceptor';
+import { jwtInterceptor } from '@shared/interceptors/jwt.interceptor';
 
 if (environment.production) {
   enableProdMode();
@@ -17,7 +20,11 @@ if (environment.production) {
 }
 
 bootstrapApplication(AppComponent, {
-  providers: [importProvidersFrom(BrowserModule, AppRoutingModule), provideAnimations(),],
+  providers: [
+    importProvidersFrom(BrowserModule, AppRoutingModule),
+    provideAnimations(),
+    provideHttpClient(withInterceptors([errorInterceptor, loadingInterceptor, jwtInterceptor, urlInterceptor])),
+  ],
 }).catch((err) => console.error(err));
 
 function selfXSSWarning() {

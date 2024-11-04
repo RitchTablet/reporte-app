@@ -24,8 +24,8 @@ export class Menu {
       items: [
         {
           icon: 'assets/icons/heroicons/outline/cog.svg',
-          label: 'Settings',
-          route: '/settings',
+          label: 'Configuration',
+          route: '/config',
         },
       ],
     },
