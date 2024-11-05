@@ -3,6 +3,20 @@ import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToggleLockUnLockButtonIconComponent } from '@shared/components/toggle-lock-un-lock-button-icon/toggle-lock-un-lock-button-icon.component';
 
 
+type typeDataInput = 
+  'text' |
+  'email' |
+  'url' |
+  'password' |
+  'number' |
+  'date' |
+  'datetime-local' |
+  'month' |
+  'search' |
+  'tel' |
+  'time' |
+  'week';
+
 @Component({
   selector: 'app-input-lock',
   standalone: true,
@@ -15,6 +29,7 @@ export class InputLockComponent {
   @Input() formGroup!: FormGroup;
   @Input() controlName: string = 'provider';
   @Input() label: string = '';
+  @Input() typeData: typeDataInput = 'text';
 
   @Output() onIsOpen = new EventEmitter<void>();
 

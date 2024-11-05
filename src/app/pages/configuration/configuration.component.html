@@ -1,14 +1,31 @@
 <div class="flex flex-col gap-5">
     <app-title-content title="Configurations - Walmart" subtitle="Config"/>
 
-    <div>
-        <header class="space-x-1 text-xs font-semibold text-foreground">
-            <a href="" class="hover:text-primary">{{'Email'}}</a>
-        </header>
+    <div class="flex flex-col gap-10">
+        <div>
+            <app-title-content title="Email"/>
+    
+            <div class="flex gap-10 mt-5">
+                <app-input-lock [formGroup]="form" controlName="user" label="User email"/>            
+                <app-input-lock [formGroup]="form" controlName="password" label="User email password" typeData="password"/>            
+            </div>
+        </div>    
 
-        <div class="flex gap-10">
-            <app-input-lock [formGroup]="formMail" controlName="provider" label="Proveedor"/>            
+        <div>
+            <app-title-content title="User"/>
+    
+            <div class="flex gap-10 mt-5">
+                <app-input-lock [formGroup]="form" controlName="user" label="User email"/>            
+                <app-input-lock [formGroup]="form" controlName="password" label="User email password" typeData="password"/>            
+            </div>
+        </div>    
+
+        <div class="flex justify-end">
+            <button class="flex-none rounded-md bg-primary px-4 py-2.5 text-xs font-semibold text-primary-foreground">
+              Guardar Configuracion
+            </button>
         </div>
-    </div>    
+    </div>
+
 
 </div>
